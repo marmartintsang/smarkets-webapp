@@ -1,0 +1,157 @@
+.wrapperEventCard {
+  display: flex;
+  align-content: center;
+  border-radius: 2px;
+  flex-direction: row;
+  min-height: 70px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #161616;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #363636;
+  }
+
+  .eventInfoContainer {
+    flex: 1 0 5rem;
+    min-height: auto;
+    min-width: 0;
+    order: 2;
+    padding: 10px;
+    padding-right: 12px;
+    @media (min-width: 40rem) {
+      flex: 1 0 5rem;
+      justify-content: center;
+      padding-right: 0;
+    }
+
+    h3,
+    h5,
+    p {
+      color: #fff;
+    }
+
+    .team {
+      flex-wrap: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin: 0;
+
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .tileFooter {
+      overflow: hidden;
+      height: 1rem;
+      line-height: 1rem;
+      border: none;
+      justify-content: flex-start;
+      margin: 0;
+      padding: 2px 0 0;
+      display: flex;
+      p {
+        margin-bottom: 0;
+        color: #a6a6a6;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .eventDate {
+        padding-right: 0.5rem;
+        min-width: 80px;
+        &.live {
+          color: #47a8ff;
+          min-width: 0;
+        }
+      }
+      .state {
+        text-transform: capitalize;
+      }
+      .marketCount {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .contractItems {
+    display: flex;
+    flex: 1 0 20rem;
+    min-width: 20rem;
+    order: 4;
+    width: 40%;
+    max-width: 40%;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+
+    .contractItem {
+      display: block;
+      margin: 0;
+      width: 33.3%;
+
+      h3,
+      h5,
+      p {
+        color: #fff;
+        margin: 0;
+      }
+
+      .contractLabel {
+        display: block;
+        height: 1.125rem;
+        text-align: center;
+      }
+      .currentPrice {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-top: 2px;
+        padding: 0 0.5rem;
+
+        & > .offer,
+        & > .bid {
+          width: 50%;
+        }
+
+        .offer {
+          .price {
+            background-color: #00b073;
+            margin-right: 0.125rem;
+          }
+        }
+
+        .bid {
+          .price {
+            background-color: #005ea6;
+          }
+        }
+
+        .stake {
+          color: #a6a6a6;
+          font-size: 0.6875rem;
+          line-height: 0.8rem;
+          margin-top: 5px;
+          border-radius: 2px;
+          display: block;
+          position: relative;
+          text-align: center;
+          white-space: nowrap;
+        }
+
+        .price {
+          color: #fff;
+          font-size: 0.75rem;
+          transition: background-color 0.3s ease;
+          border-radius: 2px;
+          display: block;
+          position: relative;
+          text-align: center;
+          white-space: nowrap;
+          padding: 4px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.wrapperEventCard {
+  width: 100%;
+  background: #161616;
+  border-radius: 6px;
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  padding: 16px 16px;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  :global(.ant-skeleton-input) {
+    border-radius: 6px;
+    height: 16px;
+    
+    :global(.ant-skeleton-input-sm) {
+      height: 10px;
+    }
+  }
+}
