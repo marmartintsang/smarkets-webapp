@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+@import '~antd/dist/antd.dark.css';
 
 body {
   padding: 0;
@@ -8,6 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --antd-wave-shadow-color: #00b073;
 }
 
 code {

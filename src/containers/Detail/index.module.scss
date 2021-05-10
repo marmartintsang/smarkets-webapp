@@ -1,0 +1,84 @@
+.eventInfoContainer {
+  flex: 1 0 5rem;
+  min-height: auto;
+  min-width: 0;
+  order: 2;
+  padding: 10px 0;
+  @media (min-width: 40rem) {
+    flex: 1 0 5rem;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  h1,
+  h5,
+  p {
+    color: #fff;
+  }
+
+  .team {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+
+    font-size: 23px;
+    font-weight: 700;
+  }
+  .tileFooter {
+    overflow: hidden;
+    height: 1rem;
+    line-height: 1rem;
+    border: none;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 2px 0 0;
+    display: flex;
+    margin-top: 1rem;
+    p {
+      margin-bottom: 0;
+      color: #a6a6a6;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .eventDate {
+      padding-right: 0.5rem;
+      min-width: 80px;
+      &.live {
+        color: #47a8ff;
+        min-width: 0;
+      }
+    }
+    .state {
+      text-transform: capitalize;
+    }
+    .marketCount {
+      margin-left: 8px;
+    }
+  }
+}
+
+:global(.ant-tabs-tab) {
+  color: #a6a6a6;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+
+  &:hover {
+    color:#fff;
+  }
+}
+
+:global(.ant-tabs-nav::before) {
+  border-bottom: none !important;
+}
+
+:global(.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn) {
+  color: #fff;
+}
+
+:global(.ant-tabs-ink-bar) {
+  background: #00b073!important;
+}

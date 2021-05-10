@@ -1,0 +1,196 @@
+.contractGroup {
+  background-color: #161616;
+  border-bottom: 1px solid #1a1a1a;
+  border-radius: 5px;
+
+  @media (min-width: 40em) {
+    & {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin: 10px 0;
+    }
+  }
+
+  .contractGroupHeader {
+    flex: 1;
+    min-height: 4.5rem;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    padding: 1em 0;
+
+    .contractGroupName {
+      padding-bottom: 2px;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .contractGroupStats {
+      min-height: 19px;
+      padding-bottom: 6px;
+      color: #888;
+      font-weight: 400;
+      display: inline-block;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      .volumeValue {
+        color: #cccc46;
+      }
+    }
+  }
+
+  .contractWrapper {
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    margin: 0;
+    .overroundInfo {
+      color: #888;
+      border-top: 1px solid rgba(136, 136, 136, 0.2);
+      display: flex;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 700;
+      flex-wrap: nowrap;
+      padding: 0.5em 0;
+      height: calc(30px + 0.5em);
+    }
+    .overroundInfoNameColumn {
+      flex: 1 1 12rem;
+      min-width: 0;
+    }
+    .lastPriceArea {
+      direction: rtl;
+      display: inline-block;
+      white-space: nowrap;
+      width: 46px;
+    }
+    .priceSeries {
+      display: flex;
+      flex: 5 0 3.75rem;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      margin: 0;
+
+      height: 3.5rem;
+      margin-bottom: -0.5rem;
+      max-width: 180px;
+      overflow: hidden;
+
+      &.sell {
+        flex-direction: row;
+      }
+
+      height: 3.5rem;
+      margin-bottom: -0.5rem;
+      max-width: 180px;
+      overflow: hidden;
+
+      .priceItem {
+        display: inline-flex;
+        flex: 1 0 52px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 0 0.25rem 0.5rem;
+        min-width: 0;
+      }
+
+      .price {
+        font-size: 0.675rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2px;
+        position: relative;
+        text-align: center;
+        white-space: nowrap;
+        font-weight: bold;
+      }
+
+      &.buy {
+        .price {
+          background-color: #00b073;
+          color: #fff;
+        }
+      }
+
+      &.sell {
+        .price {
+          background-color: #005ea6;
+        }
+      }
+
+      .price.normal {
+        background-color: #2e2e2e;
+        color: #fff;
+      }
+
+      .tick.stake {
+        color: #a6a6a6;
+      }
+      .stake {
+        font-size: 0.6875rem;
+        line-height: 0.8rem;
+        margin-top: 5px;
+      }
+      .tick {
+        border-radius: 2px;
+        display: block;
+        position: relative;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .contracts {
+    list-style-type: none;
+    padding-left: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    min-height: 70px;
+    border-top: 1px solid rgba(136, 136, 136, 0.2);
+    color: #fff;
+    .contractNameColumn {
+      flex: 1 1 12rem;
+      min-width: 0;
+      box-sizing: border-box;
+
+      .contractInfo {
+        padding-bottom: 0.3rem;
+      }
+    }
+    @media (min-width: 40em) {
+      .lastPriceArea {
+        padding-right: 12px;
+      }
+    }
+    .lastPriceArea {
+      flex: 0 0 4rem;
+      cursor: unset;
+      text-align: right;
+      border-radius: 4px;
+      pointer-events: none;
+      position: relative;
+    }
+
+    .formattedPrice {
+      font-weight: 700;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: 'tnum';
+    }
+  }
+}

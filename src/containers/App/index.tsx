@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Layout, Menu, Breadcrumb, Button } from 'antd';
 import EventCard from '@/components/EventCard';
 import ListSkeleton from '@/components/ListSkeleton';
 import * as api from '@/services';
-import { ReactComponent as SmarketsLogo } from '@/assets/smarkets-logo.svg';
 import MainLayout from '@/components/MainLayout';
 
 import styles from './index.module.scss';
-
-const { Header, Content, Footer } = Layout;
 
 function App() {
   const [events, setEvents] = useState<EventDetail[] | null>(null);
@@ -190,7 +186,7 @@ function App() {
   }, []);
   return (
     <MainLayout>
-      <h3 className={styles.title}>Top Football Events.</h3>
+      <h3 className={styles.title}>Top Football Events</h3>
       <div className="site-layout-content">
         {events === null ? (
           <ListSkeleton />

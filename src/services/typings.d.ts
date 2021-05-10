@@ -67,7 +67,7 @@ interface Market {
   state: string;
   winner_count: number;
   contracts?: Contract[];
-  volumes?: Volume[];
+  volumes?: Volume;
 }
 
 interface Contract {
@@ -87,6 +87,7 @@ interface Contract {
   slug: string;
   state_or_outcome: string;
   quote?: Quote;
+  volume?: Volume;
 }
 
 interface Volume {
