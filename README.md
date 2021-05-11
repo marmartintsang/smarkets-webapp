@@ -1,9 +1,81 @@
 # Smarkets Web App
 
+[![GitHub Actions status](https://raw.githubusercontent.com/marmartintsang/smarkets-webapp/develop/docs/images/badge.svg)](https://github.com/marmartintsang/smarkets-webapp/actions)
 
-# Getting Started with Create React App
+---
+
+## Getting Started
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Environment setup
+
+First you need to install [node](https://nodejs.org/en/). Make sure the node version is 10.13 or above. ([nvm](https://github.com/creationix/nvm) is recommended to manage node version for Mac OSX)
+
+```bash
+$ node -v
+v10.13.0
+```
+
+[Yarn](https://github.com/yarnpkg/yarn) is recommend to use for managing npm dependencies.
+
+```bash
+# install yarn globally
+$ npm i yarn -g
+# confirm yarn version
+$ yarn -v
+```
+
+Install dependencies
+
+```bash
+$ yarn
+
+yarn install v1.21.1
+[1/4] 🔍  Resolving packages...
+success Already up-to-date.
+✨  Done in 0.71s.
+```
+
+## Startup project
+
+> To bypass Cross-origin resource sharing(CORS) mechanisms we encourage you to use: [https://cors-anywhere.herokuapp.com/](https://cors-anywhere.herokuapp.com/)
+
+1. Navigate to [https://cors-anywhere.herokuapp.com/](https://cors-anywhere.herokuapp.com/)
+
+2. Click `Request temporary access to the demo server` button
+
+3. Startup project
+
+```bash
+$ yarn start
+```
+
+---
+
+### Unit Test
+
+[Jest](https://jestjs.io/) is used for unit testing. There are 3 test cases to test:
+
+- Tests UI render for main screen
+- Tests price to decimal odds convertion
+- Tests quantity to back stake convertion
+
+Start unit test
+
+```bash
+$ yarn run test
+```
+
+---
+
+## Continuous Integration (CI)
+
+Continuous Integration (CI) is implemented by [GitHub Actions](https://github.com/marmartintsang/martian-robots/actions) in this project. Unit tests will be run automatically if pushing to `master` branch. The configuration file can be found in `.github/workflows/ci.yml`
+
+---
 
 ## Available Scripts
 

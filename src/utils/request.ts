@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const request = axios.create({
-  baseURL: 'http://gdccb.test:8888/2021/cros/https://api.smarkets.com/v3/',
+  baseURL: 'https://cors-anywhere.herokuapp.com/https://api.smarkets.com/v3/',
   timeout: 60000,
 });
 

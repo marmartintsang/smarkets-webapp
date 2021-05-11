@@ -9,6 +9,7 @@
   background-color: #161616;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  flex-wrap: wrap;
 
   &:hover {
     background-color: #363636;
@@ -152,6 +153,19 @@
           padding: 4px 0;
         }
       }
+    }
+  }
+
+  @media (max-width: 39.9375rem) {
+    .contractItems {
+      min-width: 100%;
+      width: 0;
+      order: 6;
+      padding-bottom: 4px;
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: #000;
+      padding: 6px 0;
     }
   }
 }
