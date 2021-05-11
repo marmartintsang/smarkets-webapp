@@ -12,11 +12,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Environment setup
 
-First you need to install [node](https://nodejs.org/en/). Make sure the node version is 10.13 or above. ([nvm](https://github.com/creationix/nvm) is recommended to manage node version for Mac OSX)
+First you need to install [node](https://nodejs.org/en/). Make sure the node version is 12.x or above. ([nvm](https://github.com/creationix/nvm) is recommended to manage node version for Mac OSX)
 
 ```bash
 $ node -v
-v10.13.0
+v12.x
 ```
 
 [Yarn](https://github.com/yarnpkg/yarn) is recommend to use for managing npm dependencies.
