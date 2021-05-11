@@ -15,3 +15,6 @@ const aliasMap = configPaths('./tsconfig.paths.json');
 
 module.exports = alias(aliasMap);
 module.exports.jest = aliasJest(aliasMap);
+
+// polyfill globalThis for older nodes
+globalThis = global;
