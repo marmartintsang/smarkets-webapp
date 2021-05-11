@@ -73,7 +73,7 @@ $ yarn run test
 
 ## Continuous Integration (CI)
 
-Continuous Integration (CI) is implemented by [GitHub Actions](https://github.com/marmartintsang/martian-robots/actions) in this project. Unit tests will be run automatically if pushing to `master` branch. The configuration file can be found in `.github/workflows/ci.yml`
+Continuous Integration (CI) is implemented by [GitHub Actions](https://github.com/marmartintsang/martian-robots/actions) in this project. Unit tests will be run automatically if pushing to `main` branch. The configuration file can be found in `.github/workflows/ci.yml`
 
 ---
 
