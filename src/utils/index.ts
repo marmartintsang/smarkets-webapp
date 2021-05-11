@@ -15,3 +15,17 @@ export const getRemainingTime = (
     format === 'hour' ? duration.asHours() : duration.asMinutes();
   return Math.floor(formattedDuration);
 };
+
+export const parseLeagueFromSlug = (slug: string) => {
+  const regex = /\/sport\/football\/([\w-]+)\/(.*)/;
+  const found = slug.match(regex);
+  if (found && found.length > 1) {
+    return found[1]
+      .replaceAll('-', ' ')
+      .toLowerCase()
+      .split(' ')
+      .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+      .join(' ');
+  }
+  return '';
+};

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Skeleton } from 'antd';
-import moment, { min } from 'moment';
+import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { toDecimalOdds, toBackStack } from '@/utils';
 

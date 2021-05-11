@@ -3,13 +3,13 @@ import MainLayout from '@/components/MainLayout';
 import ListSkeleton from '@/components/ListSkeleton';
 import { useParams } from 'react-router-dom';
 import * as api from '@/services';
-import moment, { min } from 'moment';
 import { Tabs } from 'antd';
 import ContractCard from '@/components/ContractCard';
-import { getRemainingTime } from '@/utils';
+import { getRemainingTime, parseLeagueFromSlug } from '@/utils';
 
 import styles from './index.module.scss';
 import { markTimeline } from 'console';
+import moment from 'moment';
 
 const { TabPane } = Tabs;
 
@@ -211,12 +211,23 @@ const Detail: React.FunctionComponent<IDetailProps> = (props) => {
       {event ? (
         <div>
           <div className={styles.eventInfoContainer}>
-            <h1 className={styles.team}>
+            <h1 className={styles.team}>{event.name}</h1>
+            <h3 className={styles.teamName}>
+              <span>Home</span>
               {event.competitors!.find((c) => c.type === 'home')?.name}
-            </h1>
-            <h1 className={styles.team}>
+            </h3>
+            <h3 className={styles.teamName}>
+              <span>Away</span>
               {event.competitors!.find((c) => c.type === 'away')?.name}
-            </h1>
+            </h3>
+            <h3 className={styles.teamName}>
+              <span>League</span>
+              {parseLeagueFromSlug(event.full_slug)}
+            </h3>
+            <h3 className={styles.teamName}>
+              <span>Start</span>
+              {moment(event.start_datetime).format('YYYY-MM-DD HH:mm:ss')}
+            </h3>
             <div className={styles.tileFooter}>
               {remainingHour > 0 ? (
                 <p className={styles.eventDate}>
@@ -250,9 +261,11 @@ const Detail: React.FunctionComponent<IDetailProps> = (props) => {
               <TabPane tab={market.category} key={market.category}>
                 {event &&
                   event.markets &&
-                  event.markets.filter(m => m.category === market.category).map((market) => (
-                    <ContractCard key={market.id} market={market} />
-                  ))}
+                  event.markets
+                    .filter((m) => m.category === market.category)
+                    .map((market) => (
+                      <ContractCard key={market.id} market={market} />
+                    ))}
               </TabPane>
             ))}
           </Tabs>

@@ -69,15 +69,15 @@ function App() {
     }
   };
 
-  const getVolumes = async (marketIds: string[]) => {
-    try {
-      const { data } = await api.getMarketsVolume(marketIds);
-      return data;
-    } catch (e) {
-      alert('API Failed, please try again');
-      return null;
-    }
-  };
+  // const getVolumes = async (marketIds: string[]) => {
+  //   try {
+  //     const { data } = await api.getMarketsVolume(marketIds);
+  //     return data;
+  //   } catch (e) {
+  //     alert('API Failed, please try again');
+  //     return null;
+  //   }
+  // };
 
   const fetchAllEvents = async () => {
     // Get All Popular Events
